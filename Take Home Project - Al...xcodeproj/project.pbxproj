@@ -13,6 +13,9 @@
 		0407698B26BADA89001C6FEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407698926BADA89001C6FEE /* Main.storyboard */; };
 		0407698D26BADA8E001C6FEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0407698C26BADA8E001C6FEE /* Assets.xcassets */; };
 		0407699026BADA8E001C6FEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407698E26BADA8E001C6FEE /* LaunchScreen.storyboard */; };
+		0407699926BB0057001C6FEE /* ChildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407699826BB0057001C6FEE /* ChildInfo.swift */; };
+		0407699E26BB0820001C6FEE /* childDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407699C26BB0820001C6FEE /* childDataCell.swift */; };
+		0407699F26BB0820001C6FEE /* childDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0407699D26BB0820001C6FEE /* childDataCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		0407698C26BADA8E001C6FEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0407698F26BADA8E001C6FEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0407699126BADA8E001C6FEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0407699826BB0057001C6FEE /* ChildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildInfo.swift; sourceTree = "<group>"; };
+		0407699C26BB0820001C6FEE /* childDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = childDataCell.swift; sourceTree = "<group>"; };
+		0407699D26BB0820001C6FEE /* childDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = childDataCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,40 @@
 			children = (
 				0407698326BADA89001C6FEE /* AppDelegate.swift */,
 				0407698526BADA89001C6FEE /* SceneDelegate.swift */,
-				0407698726BADA89001C6FEE /* ViewController.swift */,
-				0407698926BADA89001C6FEE /* Main.storyboard */,
+				0407699726BB0025001C6FEE /* Model */,
+				0407699A26BB01AA001C6FEE /* Controller */,
+				0407699B26BB07CD001C6FEE /* View */,
 				0407698C26BADA8E001C6FEE /* Assets.xcassets */,
 				0407698E26BADA8E001C6FEE /* LaunchScreen.storyboard */,
 				0407699126BADA8E001C6FEE /* Info.plist */,
 			);
 			path = "Take Home Project - Al..";
+			sourceTree = "<group>";
+		};
+		0407699726BB0025001C6FEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0407699826BB0057001C6FEE /* ChildInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0407699A26BB01AA001C6FEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0407698726BADA89001C6FEE /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0407699B26BB07CD001C6FEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0407698926BADA89001C6FEE /* Main.storyboard */,
+				0407699C26BB0820001C6FEE /* childDataCell.swift */,
+				0407699D26BB0820001C6FEE /* childDataCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0407699F26BB0820001C6FEE /* childDataCell.xib in Resources */,
 				0407699026BADA8E001C6FEE /* LaunchScreen.storyboard in Resources */,
 				0407698D26BADA8E001C6FEE /* Assets.xcassets in Resources */,
 				0407698B26BADA89001C6FEE /* Main.storyboard in Resources */,
@@ -139,6 +173,8 @@
 			files = (
 				0407698826BADA89001C6FEE /* ViewController.swift in Sources */,
 				0407698426BADA89001C6FEE /* AppDelegate.swift in Sources */,
+				0407699926BB0057001C6FEE /* ChildInfo.swift in Sources */,
+				0407699E26BB0820001C6FEE /* childDataCell.swift in Sources */,
 				0407698626BADA89001C6FEE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
