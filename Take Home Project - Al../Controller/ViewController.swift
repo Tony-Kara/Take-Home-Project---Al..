@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var childData : [ChildInfo] = [
-        ChildInfo(childName: "tony", childAge: 5),
-        ChildInfo(childName: "tom", childAge: 10)
+    var childArray : [ChildInfo] = [
+        ChildInfo(childName: "tony", childAge: "5"),
+        ChildInfo(childName: "tom", childAge: "10")
     
     ]
     
@@ -29,6 +29,43 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func addNewData(_ sender: UIBarButtonItem) {
+        
+        var textFieldOne = UITextField()
+        var textFieldTwo = UITextField()
+        
+    
+        let alert = UIAlertController(title: "Add child's name", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Add Name", style: .default) { (action) in
+            // actions that will occur after pressing button
+            let newData = ChildInfo(childName: "\(textFieldOne.text!)", childAge: "\(textFieldTwo.text!)")
+            self.childArray.append(newData)
+            self.tableview.reloadData()
+                    
+            
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Enter child's Name"
+            textFieldOne = alertTextField
+        }
+        
+        alert.addTextField { (alertTextFieldTwo) in
+            alertTextFieldTwo.placeholder = "Enter child's Age"
+            textFieldTwo = alertTextFieldTwo
+        }
+        
+        
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    
+
     
     
     
@@ -37,20 +74,31 @@ class ViewController: UIViewController {
 
 extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return childData.count
+        return childArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: "tony", for: indexPath) as! childDataCell
-        cell.childName.text = childData[indexPath.row].childName
-        return cell
+        cell.childName.text = childArray[indexPath.row].childName
+        cell.childAge.text = childArray[indexPath.row].childAge
         
+        cell.deleteBtn.addTarget(self, action: #selector(deleteBtnTapped(sender:)), for: .touchUpInside)
+        return cell
         
         
         
     }
     
     
+   @objc func deleteBtnTapped(sender: UIButton){
+    
+    let point = sender.convert(CGPoint.zero, to: tableview)
+    guard let indexPath = tableview.indexPathForRow(at: point) else{return}
+    childArray.remove(at: indexPath.row)
+    tableview.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .left)
+    tableview.reloadData()
+    
+   }
     
     
 }

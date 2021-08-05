@@ -9,5 +9,7 @@ import Foundation
 
 struct ChildInfo {
     let childName : String
-    let childAge : Int
+    let childAge : String
+    
+   
 }
