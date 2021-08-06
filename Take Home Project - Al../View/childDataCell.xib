@@ -30,7 +30,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJp-Ct-N8M">
                                         <rect key="frame" x="283.5" y="0.0" width="54.5" height="28.5"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Delete"/>
                                     </button>
                                 </subviews>
                             </stackView>
