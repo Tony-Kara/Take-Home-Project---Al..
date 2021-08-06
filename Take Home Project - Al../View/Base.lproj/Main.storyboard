@@ -33,7 +33,7 @@
                                             <constraint firstAttribute="height" constant="70" id="ibZ-hT-Vbg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unh-Ml-PXH">
                                         <rect key="frame" x="0.0" y="210" width="354" height="42"/>
@@ -41,7 +41,6 @@
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="saveBtnTapped:" destination="Vdl-wV-5Jo" eventType="touchUpInside" id="p9k-Jx-eqo"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="4pS-6U-vpX"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -73,6 +72,7 @@
                     <connections>
                         <outlet property="userAge" destination="gI2-ZV-ub4" id="3to-hH-F7F"/>
                         <outlet property="userName" destination="yqe-AG-6zX" id="Wlc-BW-7CK"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="tony" id="B9f-ov-NnG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0Z-nE-9BJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1345" y="196"/>
+            <point key="canvasLocation" x="1435" y="166"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7KR-v9-fob">

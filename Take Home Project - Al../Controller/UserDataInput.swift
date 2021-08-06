@@ -14,8 +14,7 @@ class UserDataInput : UIViewController {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userAge: UITextField!
     
-  //  var nameOfUser = ""
-  //  var ageOfUser = ""
+  
     
     var userDataModel : UserDataModel?
     
@@ -33,9 +32,21 @@ class UserDataInput : UIViewController {
         userName.endEditing(true)
         userAge.endEditing(true)
         
+        self.performSegue(withIdentifier: "tony", sender: self)
         
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tony" {
+            
+            let destinationVC = segue.destination as! ViewController
+            destinationVC.name = userDataModel?.userNameInfo
+            destinationVC.age = userDataModel?.userAgeInfo
+            
+            
+        }
+    }
     
     
 }
@@ -65,6 +76,8 @@ extension UserDataInput : UITextFieldDelegate {
     }
    
     
+    
+    
     func textFieldDidEndEditing(_ textField: UITextField) { // This function is called after the user has finished entering inputs into the search field.
         if let nameOfUser = userName.text, let ageOfUser = userAge.text {
                userDataModel = UserDataModel(userNameInfo: nameOfUser, userAgeInfo: ageOfUser)
@@ -72,6 +85,9 @@ extension UserDataInput : UITextFieldDelegate {
             
         }
        
+        
+        
+        
        
     }
     

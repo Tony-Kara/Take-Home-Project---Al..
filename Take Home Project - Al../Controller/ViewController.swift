@@ -21,10 +21,17 @@ class ViewController: UIViewController {
         tableview.dataSource = self
         tableview.delegate = self
         
+        print(name)
+        print(age)
+        
+        
         // register tableview
         tableview.register(UINib(nibName: "childDataCell", bundle: nil), forCellReuseIdentifier: "tony")
     }
 
+    var name : String?
+    var age :  String?
+    
 
     @IBAction func addNewData(_ sender: UIBarButtonItem) {
         
