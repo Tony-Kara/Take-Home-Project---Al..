@@ -19,17 +19,17 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="be7-hd-wJD">
                         <rect key="frame" x="5" y="5" width="338" height="54"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="229" translatesAutoresizingMaskIntoConstraints="NO" id="yen-GT-yWD">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="yen-GT-yWD">
                                 <rect key="frame" x="0.0" y="0.0" width="338" height="28.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkr-d5-dYP">
-                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="28.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="129" height="28.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJp-Ct-N8M">
-                                        <rect key="frame" x="283.5" y="0.0" width="54.5" height="28.5"/>
+                                        <rect key="frame" x="209" y="0.0" width="129" height="28.5"/>
                                         <state key="normal" title="Delete"/>
                                     </button>
                                 </subviews>
