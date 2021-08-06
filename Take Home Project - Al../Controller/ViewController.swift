@@ -11,6 +11,8 @@ class ViewController: UIViewController {
 
     var childArray : [ChildInfo] = []
     
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userAge: UILabel!
     
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var addNewDataTapped: UIBarButtonItem!
@@ -18,11 +20,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userName.text = "UserName: \(name!)"
+        userAge.text = "Age of User: \(age!)"
+        
         tableview.dataSource = self
         tableview.delegate = self
         
-        print(name)
-        print(age)
+      
         
         
         // register tableview

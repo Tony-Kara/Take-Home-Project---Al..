@@ -88,21 +88,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NUP-ls-FFA">
-                                <rect key="frame" x="0.0" y="206" width="414" height="690"/>
+                                <rect key="frame" x="0.0" y="222" width="414" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="wPL-PO-RN5">
-                                <rect key="frame" x="0.0" y="93" width="414" height="73"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wPL-PO-RN5">
+                                <rect key="frame" x="0.0" y="118" width="414" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyZ-iG-8mx">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="22"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFj-vI-FcW">
-                                        <rect key="frame" x="0.0" y="52.5" width="414" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="42" width="414" height="22"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -113,7 +113,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wPL-PO-RN5" secondAttribute="trailing" id="3b4-zx-lZm"/>
-                            <constraint firstItem="wPL-PO-RN5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="7ri-29-8VJ"/>
+                            <constraint firstItem="wPL-PO-RN5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="7ri-29-8VJ"/>
                             <constraint firstAttribute="bottom" secondItem="NUP-ls-FFA" secondAttribute="bottom" id="E1T-VD-B3H"/>
                             <constraint firstItem="NUP-ls-FFA" firstAttribute="top" secondItem="wPL-PO-RN5" secondAttribute="bottom" constant="40" id="bLw-41-B5A"/>
                             <constraint firstItem="wPL-PO-RN5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eEO-1K-oLk"/>
@@ -131,6 +131,8 @@
                     <connections>
                         <outlet property="addNewDataTapped" destination="k8p-WL-wS0" id="LVg-zK-vaJ"/>
                         <outlet property="tableview" destination="NUP-ls-FFA" id="kir-9S-6e6"/>
+                        <outlet property="userAge" destination="pFj-vI-FcW" id="m7c-HC-ill"/>
+                        <outlet property="userName" destination="zyZ-iG-8mx" id="4ju-JG-aOf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
