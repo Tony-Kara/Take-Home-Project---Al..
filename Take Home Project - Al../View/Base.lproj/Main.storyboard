@@ -11,7 +11,7 @@
         <!--Al.. -->
         <scene sceneID="tgR-z5-LPr">
             <objects>
-                <viewController id="Vdl-wV-5Jo" sceneMemberID="viewController">
+                <viewController id="Vdl-wV-5Jo" customClass="UserDataInput" customModule="Take_Home_Project___Al__" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gRo-QB-qJg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,6 +40,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
+                                            <action selector="saveBtnTapped:" destination="Vdl-wV-5Jo" eventType="touchUpInside" id="p9k-Jx-eqo"/>
                                             <segue destination="BYZ-38-t0r" kind="show" id="4pS-6U-vpX"/>
                                         </connections>
                                     </button>
@@ -69,10 +70,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Al.. " id="lIl-cT-8Sw"/>
+                    <connections>
+                        <outlet property="userAge" destination="gI2-ZV-ub4" id="3to-hH-F7F"/>
+                        <outlet property="userName" destination="yqe-AG-6zX" id="Wlc-BW-7CK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0Z-nE-9BJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="521.73913043478262" y="206.91964285714286"/>
+            <point key="canvasLocation" x="526" y="196"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

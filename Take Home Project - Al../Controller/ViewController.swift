@@ -9,11 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var childArray : [ChildInfo] = [
-        ChildInfo(childName: "tony", childAge: "5"),
-        ChildInfo(childName: "tom", childAge: "10")
-    
-    ]
+    var childArray : [ChildInfo] = []
     
     
     @IBOutlet weak var tableview: UITableView!

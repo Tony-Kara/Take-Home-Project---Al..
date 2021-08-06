@@ -16,6 +16,8 @@
 		0407699926BB0057001C6FEE /* ChildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407699826BB0057001C6FEE /* ChildInfo.swift */; };
 		0407699E26BB0820001C6FEE /* childDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407699C26BB0820001C6FEE /* childDataCell.swift */; };
 		0407699F26BB0820001C6FEE /* childDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0407699D26BB0820001C6FEE /* childDataCell.xib */; };
+		040769A526BD25F8001C6FEE /* UserDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040769A426BD25F8001C6FEE /* UserDataInput.swift */; };
+		040769A726BD310B001C6FEE /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040769A626BD310B001C6FEE /* UserDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		0407699826BB0057001C6FEE /* ChildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildInfo.swift; sourceTree = "<group>"; };
 		0407699C26BB0820001C6FEE /* childDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = childDataCell.swift; sourceTree = "<group>"; };
 		0407699D26BB0820001C6FEE /* childDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = childDataCell.xib; sourceTree = "<group>"; };
+		040769A426BD25F8001C6FEE /* UserDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataInput.swift; sourceTree = "<group>"; };
+		040769A626BD310B001C6FEE /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				0407699826BB0057001C6FEE /* ChildInfo.swift */,
+				040769A626BD310B001C6FEE /* UserDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				0407698726BADA89001C6FEE /* ViewController.swift */,
+				040769A426BD25F8001C6FEE /* UserDataInput.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +178,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0407698826BADA89001C6FEE /* ViewController.swift in Sources */,
+				040769A526BD25F8001C6FEE /* UserDataInput.swift in Sources */,
+				040769A726BD310B001C6FEE /* UserDataModel.swift in Sources */,
 				0407698426BADA89001C6FEE /* AppDelegate.swift in Sources */,
 				0407699926BB0057001C6FEE /* ChildInfo.swift in Sources */,
 				0407699E26BB0820001C6FEE /* childDataCell.swift in Sources */,
