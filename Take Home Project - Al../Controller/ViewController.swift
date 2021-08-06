@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var addNewDataTapped: UIBarButtonItem!
     
     
     override func viewDidLoad() {
@@ -40,6 +41,10 @@ class ViewController: UIViewController {
             // actions that will occur after pressing button
             let newData = ChildInfo(childName: "\(textFieldOne.text!)", childAge: "\(textFieldTwo.text!)")
             self.childArray.append(newData)
+            if self.childArray.count >= 5 {
+                self.addNewDataTapped.isEnabled = false
+                self.addNewDataTapped.tintColor = UIColor.white
+            }
             self.tableview.reloadData()
                     
             
@@ -82,6 +87,7 @@ extension ViewController : UITableViewDataSource {
         cell.childName.text = childArray[indexPath.row].childName
         cell.childAge.text = childArray[indexPath.row].childAge
         
+        // a way to indirectly create an IBAction for my deleteBtn which lies in the xib file
         cell.deleteBtn.addTarget(self, action: #selector(deleteBtnTapped(sender:)), for: .touchUpInside)
         return cell
         
@@ -91,7 +97,7 @@ extension ViewController : UITableViewDataSource {
     
     
    @objc func deleteBtnTapped(sender: UIButton){
-    
+                       // get a paticular point in tableview, in my case, the point where my present row exists
     let point = sender.convert(CGPoint.zero, to: tableview)
     guard let indexPath = tableview.indexPathForRow(at: point) else{return}
     childArray.remove(at: indexPath.row)

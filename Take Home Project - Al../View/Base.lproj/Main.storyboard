@@ -84,6 +84,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addNewDataTapped" destination="k8p-WL-wS0" id="LVg-zK-vaJ"/>
                         <outlet property="tableview" destination="NUP-ls-FFA" id="kir-9S-6e6"/>
                     </connections>
                 </viewController>
