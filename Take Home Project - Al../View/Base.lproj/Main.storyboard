@@ -16,17 +16,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unh-Ml-PXH">
-                                <rect key="frame" x="138" y="398" width="132" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="4pS-6U-vpX"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRN-l2-pIG" userLabel="Top View">
+                                <rect key="frame" x="30" y="330" width="354" height="462"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя пользователя" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqe-AG-6zX" userLabel="User Name Text Field">
+                                        <rect key="frame" x="10" y="30" width="334" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="dEm-yd-w2Q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите возраст пользователя" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gI2-ZV-ub4" userLabel="User Age Text Field">
+                                        <rect key="frame" x="10" y="120" width="334" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="ibZ-hT-Vbg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unh-Ml-PXH">
+                                        <rect key="frame" x="0.0" y="210" width="354" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="4pS-6U-vpX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Unh-Ml-PXH" firstAttribute="leading" secondItem="PRN-l2-pIG" secondAttribute="leading" id="T2P-uf-e79"/>
+                                    <constraint firstAttribute="trailing" secondItem="yqe-AG-6zX" secondAttribute="trailing" constant="10" id="Wt3-Jd-i7v"/>
+                                    <constraint firstItem="Unh-Ml-PXH" firstAttribute="centerY" secondItem="PRN-l2-pIG" secondAttribute="centerY" id="Z6y-fJ-n4p"/>
+                                    <constraint firstItem="Unh-Ml-PXH" firstAttribute="top" secondItem="gI2-ZV-ub4" secondAttribute="bottom" constant="20" id="bhf-Om-g5S"/>
+                                    <constraint firstAttribute="trailing" secondItem="gI2-ZV-ub4" secondAttribute="trailing" constant="10" id="bvu-dM-dU6"/>
+                                    <constraint firstItem="yqe-AG-6zX" firstAttribute="top" secondItem="PRN-l2-pIG" secondAttribute="top" constant="30" id="e80-ZL-ds7"/>
+                                    <constraint firstItem="gI2-ZV-ub4" firstAttribute="top" secondItem="yqe-AG-6zX" secondAttribute="bottom" constant="20" id="gaR-Z2-uIU"/>
+                                    <constraint firstItem="gI2-ZV-ub4" firstAttribute="leading" secondItem="PRN-l2-pIG" secondAttribute="leading" constant="10" id="kpO-qo-HSa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Unh-Ml-PXH" secondAttribute="trailing" id="lCb-hQ-mEo"/>
+                                    <constraint firstItem="yqe-AG-6zX" firstAttribute="leading" secondItem="PRN-l2-pIG" secondAttribute="leading" constant="10" id="rxd-aO-40s"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1PP-xG-FVH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PRN-l2-pIG" firstAttribute="leading" secondItem="1PP-xG-FVH" secondAttribute="leading" constant="30" id="A9n-nf-rur"/>
+                            <constraint firstItem="1PP-xG-FVH" firstAttribute="bottom" secondItem="PRN-l2-pIG" secondAttribute="bottom" constant="70" id="CPD-JU-PlB"/>
+                            <constraint firstItem="PRN-l2-pIG" firstAttribute="centerX" secondItem="gRo-QB-qJg" secondAttribute="centerX" id="S2e-Rw-zj9"/>
+                            <constraint firstItem="1PP-xG-FVH" firstAttribute="trailing" secondItem="PRN-l2-pIG" secondAttribute="trailing" constant="30" id="ZCZ-BX-IdH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Al.. " id="lIl-cT-8Sw"/>
                 </viewController>
