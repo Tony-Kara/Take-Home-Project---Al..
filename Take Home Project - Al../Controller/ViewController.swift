@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     var childArray : [ChildInfo] = []
     
     @IBOutlet weak var userName: UILabel!
@@ -25,25 +25,23 @@ class ViewController: UIViewController {
         userAge.text = "Age of User: \(age!)"
         
         tableview.dataSource = self
-        tableview.delegate = self
         
-      
-        
+
         
         // register tableview
         tableview.register(UINib(nibName: "childDataCell", bundle: nil), forCellReuseIdentifier: "tony")
     }
-
+    
     var name : String?
     var age :  String?
     
-
+    //MARK: - Fucntions to add Each child data
     @IBAction func addNewData(_ sender: UIBarButtonItem) {
         
         var textFieldOne = UITextField()
         var textFieldTwo = UITextField()
         
-    
+        
         let alert = UIAlertController(title: "Add child's name", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add Name", style: .default) { (action) in
             // actions that will occur after pressing button
@@ -54,7 +52,7 @@ class ViewController: UIViewController {
                 self.addNewDataTapped.tintColor = UIColor.white
             }
             self.tableview.reloadData()
-                    
+            
             
         }
         
@@ -76,15 +74,12 @@ class ViewController: UIViewController {
         
     }
     
-    
-    
-
-    
-    
+ 
     
 }
 
 
+//MARK: - UITableViewDataSource
 extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return childArray.count
@@ -98,31 +93,22 @@ extension ViewController : UITableViewDataSource {
         // a way to indirectly create an IBAction for my deleteBtn which lies in the xib file
         cell.deleteBtn.addTarget(self, action: #selector(deleteBtnTapped(sender:)), for: .touchUpInside)
         return cell
-        
-        
-        
+     
     }
     
     
-   @objc func deleteBtnTapped(sender: UIButton){
-                       // get a paticular point in tableview, in my case, the point where my present row exists
-    let point = sender.convert(CGPoint.zero, to: tableview)
-    guard let indexPath = tableview.indexPathForRow(at: point) else{return}
-    childArray.remove(at: indexPath.row)
-    tableview.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .left)
-    tableview.reloadData()
-    
-   }
+    @objc func deleteBtnTapped(sender: UIButton){
+        // get a paticular point in tableview, in my case, the point where my present row exists
+        let point = sender.convert(CGPoint.zero, to: tableview)
+        guard let indexPath = tableview.indexPathForRow(at: point) else{return}
+        childArray.remove(at: indexPath.row)
+        tableview.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .left)
+        tableview.reloadData()
+        
+    }
     
     
 }
 
 
-extension ViewController : UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-    }
-    
-    
-}
+
